@@ -12,11 +12,18 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
+      <h1 class="project-name">
+        <div>
+          <div>
+            <img src="{{ site.baseurl }}/favicon.ico" alt="">
+          </div>
+          <div>
+            {{ site.title | default: site.github.repository_name }}
+          </div>
+        </div>
+      </h1>
       <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
-      {% if site.github.is_project_page %}
-        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-      {% endif %}
+      
       {% if site.show_downloads %}
         <a href="{{ site.github.win32_url }}" class="btn">Download .exe ( 32bit )</a>
         <a href="{{ site.github.win64_url }}" class="btn">Download .exe ( 64bit )</a>

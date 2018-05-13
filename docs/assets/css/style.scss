@@ -1,4 +1,6 @@
 $header-bg-color: #159957 !default;
 $header-bg-color-secondary: #6a1b9a !default;
-import "{{ site.theme }}";
+$body-link-color: #6a1b9a !default;
+@import "{{ site.theme }}";
 
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
