@@ -2,7 +2,10 @@ theme: jekyll-theme-cayman
 
 gem "github-pages", group: :jekyll_plugins
 
-title: "This is a title"
-description: "[A short description of your site's purpose]"
+title: "Pandam"
+description: "Canal de distribución para Pandam - SyM Inversiones"
 show_downloads: "true"
 
+github:
+  win32_url: https://github.com/liederivative/pandam-sym/build/win32/latest
+  win64_url: https://github.com/liederivative/pandam-sym/build/win64/latest
