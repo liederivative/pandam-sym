@@ -26,7 +26,7 @@
       
       {% if site.show_downloads %}
         <a href="{{ site.github.win32_url }}" class="btn">Download .exe ( 32bit )</a>
-        <a href="{{ site.github.repository_url.assets(1).browser_download_url }}" class="btn">Download .exe ( 64bit )</a>
+        <a id="win64" href="" class="btn">Download .exe ( 64bit )</a>
       {% endif %}
     </section>
 
@@ -37,14 +37,14 @@
         <span style="display:none" id="lastest_release" >{{ site.github.latest_release }}</span>
         {{ site.github.build_revision}}
         {% if site.github.is_project_page %}
-          <span class="site-footer-owner"><a href="#">Pandam</a> is maintained by <a href="{{ site.github.repository_url.assets }}">Gezeta &copy; 2018</a>.</span>
+          <span class="site-footer-owner"><a href="#">Pandam</a> is maintained by <a href="{{ site.github.repository_url }}">Gezeta &copy; 2018</a>.</span>
         {% endif %}
         
       </footer>
     </section>
     {% if site.gitgub.latest_release %}
       <script>
-        window.latest_release = document.getElementById('lastest_release');
+        document.getElementById('win64').href = JSON.parse((document.getElementById('lastest_release').innerText).replace(/=>/g,":")).assets[1].browser_download_url;
       </script>
     {% endif %}
     {% if site.google_analytics %}
