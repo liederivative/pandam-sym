@@ -32,8 +32,9 @@
 
     <section class="main-content">
       {{ content }}
-
+      
       <footer class="site-footer">
+        <span style="display:none" id="lastest_release" >{{ site.github.latest_release }}</span>
         {{ site.github.build_revision}}
         {% if site.github.is_project_page %}
           <span class="site-footer-owner"><a href="#">Pandam</a> is maintained by <a href="{{ site.github.repository_url }}">Gezeta &copy; 2018</a>.</span>
@@ -41,7 +42,11 @@
         
       </footer>
     </section>
-
+    {% if site.gitgub.latest_release %}
+      <script>
+        window.latest_release = document.getElementById('lastest_release');
+      </script>
+    {% endif %}
     {% if site.google_analytics %}
       <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
