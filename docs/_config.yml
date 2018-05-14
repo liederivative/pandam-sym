@@ -9,3 +9,4 @@ show_downloads: "true"
 github:
   win32_url: https://github.com/liederivative/pandam-sym/build/win32/latest
   win64_url: https://github.com/liederivative/pandam-sym/build/win64/latest
+  -assets
