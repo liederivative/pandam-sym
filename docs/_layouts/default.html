@@ -120,7 +120,7 @@ function iteratorFor(items) {
   return iterator
 }
 
-export function Headers(headers) {
+function Headers(headers) {
   this.map = {}
 
   if (headers instanceof Headers) {
@@ -351,7 +351,7 @@ function normalizeMethod(method) {
   return methods.indexOf(upcased) > -1 ? upcased : method
 }
 
-export function Request(input, options) {
+function Request(input, options) {
   options = options || {}
   var body = options.body
 
@@ -469,7 +469,7 @@ Response.redirect = function(url, status) {
   return new Response(null, {status: status, headers: {location: url}})
 }
 
-export var DOMException = self.DOMException
+var DOMException = self.DOMException
 try {
   new DOMException()
 } catch (err) {
@@ -483,7 +483,7 @@ try {
   DOMException.prototype.constructor = DOMException
 }
 
-export function fetch(input, init) {
+function fetch(input, init) {
   return new Promise(function(resolve, reject) {
     var request = new Request(input, init)
 
