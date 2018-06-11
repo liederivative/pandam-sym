@@ -565,7 +565,7 @@ if (!self.fetch) {
         .then(function(response) {
           return response.json()
         }).then(function(json) {
-          document.getElementById('win64').href = JSON.parse((json).replace(/=>/g,":")).assets[1].browser_download_url;
+          document.getElementById('win64').href = json.assets[1].browser_download_url;
         })
         
         
