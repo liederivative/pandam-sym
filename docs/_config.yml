@@ -3,7 +3,7 @@ theme: jekyll-theme-cayman
 gem "github-pages", group: :jekyll_plugins
 
 title: "Pandam"
-description: "Canal de distribución para Pandam - SyM Inversiones"
+description: "Canal de distribución para Pandam - Solu Inversiones S&M"
 show_downloads: "true"
 
 github:
