@@ -8,6 +8,21 @@
     <meta name="theme-color" content="#157878">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="icon" href="{{ site.baseurl }}/favicon.ico" >
+    <style>
+      .imgwrapper{
+          width: 24%;   
+          margin: 0 auto;
+      }
+      .awrapper{
+            text-align: center;
+            display: inline-table;
+            position: relative;
+            margin-left: 1rem;
+          }
+      .play-img{
+          width:100%;
+      }
+    </style>
 
   </head>
   <body>
@@ -27,8 +42,8 @@
       {% if site.show_downloads %}
         <a style="display:none" href="{{ site.github.win32_url }}" class="btn">Download .exe ( 32bit )</a>
         <a id="win64" href="" class="btn">Download .exe ( 64bit )</a>
-        <div><a href='https://play.google.com/store/apps/details?id=com.gezeta.sym.pandam&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
-          <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/>
+        <div class="imgwrapper"><a class="awrapper" href='https://play.google.com/store/apps/details?id=com.gezeta.sym.pandam&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+          <img class="play-img" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/>
           </a>
         </div>
       {% endif %}
